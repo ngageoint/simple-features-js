@@ -58,7 +58,7 @@ const polygon = new Polygon(lineString)
 
 ### Build ###
 
-[![Build & Test](https://github.com/ngageoint/simple-features-js/workflows/Build%20&%20Test/badge.svg)](https://github.com/ngageoint/simple-features-js/actions/workflows/build-test.yml)
+[![Build & Test](https://github.com/ngageoint/simple-features-js/workflows/Run%20&%20Tests/badge.svg)](https://github.com/ngageoint/simple-features-js/actions/workflows/run-tests.yml)
 
 Build this repository using Node.js:
    
