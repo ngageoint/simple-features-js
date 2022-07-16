@@ -41,6 +41,8 @@ const polygon = new Polygon(lineString)
 ```
 
 #### Node Usage ####
+[![NPM](https://img.shields.io/npm/v/@ngageoint/simple-features-js.svg)](https://www.npmjs.com/package/@ngageoint/simple-features-js)
+
 Pull from [NPM](https://www.npmjs.com/package/@ngageoint/simple-features-js)
 
 ```install
@@ -58,9 +60,7 @@ const polygon = new Polygon(lineString)
 
 ### Build ###
 
-[![Build Status](https://travis-ci.org/ngageoint/simple-features-js.svg?branch=main)](https://travis-ci.org/ngageoint/simple-features-js)
-[![NPM](https://img.shields.io/npm/v/@ngageoint/simple-features-js.svg)](https://www.npmjs.com/package/@ngageoint/simple-features-js)
-[![Coverage Status](https://coveralls.io/repos/github/ngageoint/simple-features-js/badge.svg)](https://coveralls.io/github/ngageoint/simple-features-js)
+![Build & Test](https://github.com/ngageoint/simple-features-js/actions/workflows/run-tests.yml/badge.svg)
 
 Build this repository using Node.js:
    
