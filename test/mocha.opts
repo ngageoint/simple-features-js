@@ -1,0 +1,5 @@
+--recursive
+--require chai
+--require test/SFTestUtils
+--require source-map-support/register
+--full-trace
