@@ -22,7 +22,6 @@
   "bugs": {
     "url": "https://github.com/ngageoint/simple-features-js/issues"
   },
-  "bin": "./cli",
   "scripts": {
     "gh-pages-build": "npm install && npm run typedoc --options typedoc.json",
     "typedoc": "rm -rf ./api-docs; typedoc --tsconfig tsconfig.json --mode file --out api-docs index.ts",
@@ -85,8 +84,6 @@
   "browser": "dist/sf.min.js",
   "files": [
     "dist",
-    "cli",
-    "converters"
   ],
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
