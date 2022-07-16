@@ -83,7 +83,7 @@
   "types": "dist/index.d.ts",
   "browser": "dist/sf.min.js",
   "files": [
-    "dist",
+    "dist"
   ],
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
