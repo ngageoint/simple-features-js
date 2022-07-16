@@ -22,7 +22,7 @@ Software source code previously released under an open source license and then m
 
 ### Usage ###
 
-View the latest [JS Docs](http://ngageoint.github.io/simple-features-js/docs/api/)
+View the latest [JS Docs](http://ngageoint.github.io/simple-features-js)
 
 ### Browser Usage ###
 
