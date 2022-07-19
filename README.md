@@ -24,7 +24,6 @@ Software source code previously released under an open source license and then m
 
 View the latest [JS Docs](http://ngageoint.github.io/simple-features-js)
 
-### Browser Usage ###
 
 #### Browser Usage ####
 ```html
