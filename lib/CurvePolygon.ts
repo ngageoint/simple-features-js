@@ -59,7 +59,8 @@ export class CurvePolygon<T extends Curve> extends Surface {
 	 * @param rings rings
 	 */
 	public set rings(rings: Array<T>) {
-		this._rings = rings;
+		this._rings = [];
+		rings.forEach(ring => this.addRing(ring));
 	}
 
 	/**
