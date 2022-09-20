@@ -59,3 +59,4 @@ export * from "./util/sweep/ShamosHoey";
 
 // Geometry Utils
 export * from "./util/GeometryUtils";
+export * from "./util/GeometryConstants";
