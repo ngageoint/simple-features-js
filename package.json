@@ -38,7 +38,8 @@
   },
   "dependencies": {
     "js_cols": "1.0.1",
-    "timsort": "^0.3.0"
+    "timsort": "^0.3.0",
+    "tstl": "2.5.8"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "0.1.3",
