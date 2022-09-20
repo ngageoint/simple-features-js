@@ -1,4 +1,3 @@
-import { List } from "tstl";
 import {
 	SFException,
 	GeometryType,
@@ -1884,10 +1883,10 @@ export class GeometryUtils {
 	 * @return cropped points in meters or null
 	 * @since 1.0.3
 	 */
-	public static cropPoints(points: List<Point>,
-		envelope: GeometryEnvelope): List<Point> {
+	public static cropPoints(points: Point[],
+		envelope: GeometryEnvelope): Point[] {
 
-		let crop = new List<Point>();
+		let crop: Point[] = [];
 
 		const left = envelope.getLeft();
 		const bottom = envelope.getBottom();
@@ -1998,28 +1997,28 @@ export class GeometryUtils {
 			previousContains = contains;
 		}
 
-		if (crop.empty) {
+		if (crop.length > 0) {
 			crop = null;
-		} else if (crop.size() > 1) {
+		} else if (crop.length > 1) {
 
-			if (points.get(0).equals(points.get(points.size() - 1))
-				&& !crop.get(0).equals(crop.get(crop.size() - 1))) {
-				crop.push(new Point(crop.get(0)));
+			if (points[0].equals(points[points.length - 1])
+				&& !crop[0].equals(crop[crop.length - 1])) {
+				crop.push(new Point(crop[0]));
 			}
 
-			if (crop.size() > 2) {
+			if (crop.length > 2) {
 
-				const simplified = new List<Point>();
-				simplified.push(crop.get(0));
-				for (let i = 1; i < crop.size() - 1; i++) {
-					const previous = simplified.get(simplified.size() - 1);
-					const point = crop.get(i);
-					const next = crop.get(i + 1);
+				const simplified: Point[] = [];
+				simplified.push(crop[0]);
+				for (let i = 1; i < crop.length - 1; i++) {
+					const previous = simplified[length - 1];
+					const point = crop[i];
+					const next = crop[i + 1];
 					if (!GeometryUtils.pointOnPath(point, previous, next)) {
 						simplified.push(point);
 					}
 				}
-				simplified.push(crop.get(crop.size() - 1));
+				simplified.push(crop[crop.length - 1]);
 				crop = simplified;
 
 			}
@@ -2042,14 +2041,14 @@ export class GeometryUtils {
 	public static cropMultiPoint(multiPoint: MultiPoint,
 		envelope: GeometryEnvelope): MultiPoint {
 		let crop: MultiPoint = null;
-		const cropPoints = new List<Point>();
+		const cropPoints: Point[] = [];
 		for (const point of multiPoint.points) {
 			const cropPoint = GeometryUtils.cropPoint(point, envelope);
 			if (cropPoint != null) {
 				cropPoints.push(cropPoint);
 			}
 		}
-		if (!cropPoints.empty) {
+		if (cropPoints.length > 0) {
 			crop = new MultiPoint(multiPoint.hasZ, multiPoint.hasM);
 			crop.points = cropPoints;
 		}
@@ -2116,14 +2115,14 @@ export class GeometryUtils {
 	public static cropMultiLineString(multiLineString: MultiLineString,
 		envelope: GeometryEnvelope): MultiLineString {
 		let crop: MultiLineString = null;
-		const cropLineStrings = new List<LineString>();
+		const cropLineStrings: LineString[] = [];
 		for (const lineString of multiLineString.lineStrings) {
 			const cropLineString = GeometryUtils.cropLineString(lineString, envelope);
 			if (cropLineString != null) {
 				cropLineStrings.push(cropLineString);
 			}
 		}
-		if (!cropLineStrings.empty) {
+		if (cropLineStrings.length > 0) {
 			crop = new MultiLineString(multiLineString.hasZ,
 				multiLineString.hasM);
 			crop.lineStrings = cropLineStrings;
@@ -2145,11 +2144,11 @@ export class GeometryUtils {
 	 */
 	public static cropPolygon(polygon: Polygon, envelope: GeometryEnvelope): Polygon {
 		let crop: Polygon = null;
-		const cropRings = new List<LineString>();
+		const cropRings: LineString[] = [];
 		for (const ring of polygon.rings) {
 			const points = ring.points;
 			if (!ring.isClosed()) {
-				points.push(new Point(points.get(0)));
+				points.push(new Point(points[0]));
 			}
 			const cropPoints = GeometryUtils.cropPoints(points, envelope);
 			if (cropPoints != null) {
@@ -2158,7 +2157,7 @@ export class GeometryUtils {
 				cropRings.push(cropRing);
 			}
 		}
-		if (!cropRings.empty) {
+		if (cropRings.length > 0) {
 			crop = new Polygon(polygon.hasZ, polygon.hasM);
 			crop.rings = cropRings;
 		}
@@ -2180,14 +2179,14 @@ export class GeometryUtils {
 	public static cropMultiPolygon(multiPolygon: MultiPolygon,
 		envelope: GeometryEnvelope): MultiPolygon {
 		let crop: MultiPolygon = null;
-		const cropPolygons = new List<Polygon>();
+		const cropPolygons: Polygon[] = [];
 		for (const polygon of multiPolygon.polygons) {
 			const cropPolygon = GeometryUtils.cropPolygon(polygon, envelope);
 			if (cropPolygon != null) {
 				cropPolygons.push(cropPolygon);
 			}
 		}
-		if (!cropPolygons.empty) {
+		if (cropPolygons.length > 0) {
 			crop = new MultiPolygon(multiPolygon.hasZ, multiPolygon.hasM);
 			crop.polygons = cropPolygons;
 		}
@@ -2233,14 +2232,14 @@ export class GeometryUtils {
 	public static cropCompoundCurve(compoundCurve: CompoundCurve,
 		envelope: GeometryEnvelope): CompoundCurve {
 		let crop: CompoundCurve = null;
-		const cropLineStrings = new List<LineString>();
+		const cropLineStrings: LineString[] = [];
 		for (const lineString of compoundCurve.lineStrings) {
 			const cropLineString = GeometryUtils.cropLineString(lineString, envelope);
 			if (cropLineString != null) {
 				cropLineStrings.push(cropLineString);
 			}
 		}
-		if (!cropLineStrings.empty) {
+		if (cropLineStrings.length > 0) {
 			crop = new CompoundCurve(compoundCurve.hasZ,
 				compoundCurve.hasM);
 			crop.lineStrings = cropLineStrings;
@@ -2263,14 +2262,14 @@ export class GeometryUtils {
 	public static cropCurvePolygon(curvePolygon: CurvePolygon<Curve>,
 		envelope: GeometryEnvelope): CurvePolygon<Curve> {
 		let crop: CurvePolygon<Curve> = null;
-		const cropRings = new List<Curve>();
+		const cropRings: Curve[] = [];
 		for (const ring of curvePolygon.rings) {
 			const cropRing = GeometryUtils.crop(ring, envelope);
 			if (cropRing != null) {
 				cropRings.push(cropRing as Curve);
 			}
 		}
-		if (!cropRings.empty) {
+		if (cropRings.length > 0) {
 			crop = new CurvePolygon(curvePolygon.hasZ, curvePolygon.hasM);
 			crop.rings = cropRings;
 		}
@@ -2292,14 +2291,14 @@ export class GeometryUtils {
 	public static cropPolyhedralSurface(polyhedralSurface: PolyhedralSurface,
 		envelope: GeometryEnvelope): PolyhedralSurface {
 		let crop: PolyhedralSurface = null;
-		const cropPolygons = new List<Polygon>();
+		const cropPolygons: Polygon[] = [];
 		for (const polygon of polyhedralSurface.polygons) {
 			const cropPolygon = GeometryUtils.cropPolygon(polygon, envelope);
 			if (cropPolygon != null) {
 				cropPolygons.push(cropPolygon);
 			}
 		}
-		if (!cropPolygons.empty) {
+		if (cropPolygons.length > 0) {
 			crop = new PolyhedralSurface(polyhedralSurface.hasZ,
 				polyhedralSurface.hasM);
 			crop.polygons = cropPolygons;
