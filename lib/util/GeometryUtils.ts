@@ -96,7 +96,7 @@ export class GeometryUtils {
 	 * @param line
 	 *            line
 	 * @return distance
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static distanceFromLine(line: Line): number {
 		return GeometryUtils.distance(line.startPoint(), line.endPoint());
@@ -110,7 +110,7 @@ export class GeometryUtils {
 	 * @param point2
 	 *            point 2
 	 * @return bearing angle in degrees between 0 and 360
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static bearing(point1: Point, point2: Point): number {
 		const y1 = GeometryUtils.degreesToRadians(point1.y);
@@ -129,7 +129,7 @@ export class GeometryUtils {
 	 *            line
 	 * @return bearing angle in degrees between 0 inclusively and 360
 	 *         exclusively
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static bearingLine(line: Line): number {
 		return GeometryUtils.bearing(line.startPoint(), line.endPoint());
@@ -141,7 +141,7 @@ export class GeometryUtils {
 	 * @param bearing
 	 *            bearing angle in degrees
 	 * @return true if north bearing
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static isNorthBearing(bearing: number): boolean {
 		bearing %= 360.0;
@@ -155,7 +155,7 @@ export class GeometryUtils {
 	 * @param bearing
 	 *            bearing angle in degrees
 	 * @return true if east bearing
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static isEastBearing(bearing: number): boolean {
 		bearing %= 360.0;
@@ -169,7 +169,7 @@ export class GeometryUtils {
 	 * @param bearing
 	 *            bearing angle in degrees
 	 * @return true if south bearing
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static isSouthBearing(bearing: number): boolean {
 		bearing %= 360.0;
@@ -183,7 +183,7 @@ export class GeometryUtils {
 	 * @param bearing
 	 *            bearing angle in degrees
 	 * @return true if west bearing
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static isWestBearing(bearing: number): boolean {
 		return (bearing % 360.0) > GeometryConstants.BEARING_SOUTH;
@@ -195,7 +195,7 @@ export class GeometryUtils {
 	 * @param degrees
 	 *            degrees
 	 * @return radians
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToRadians(degrees: number): number {
 		return degrees * GeometryConstants.DEGREES_TO_RADIANS;
@@ -207,7 +207,7 @@ export class GeometryUtils {
 	 * @param radians
 	 *            radians
 	 * @return degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static radiansToDegrees(radians: number): number {
 		return radians * GeometryConstants.RADIANS_TO_DEGREES;
@@ -262,7 +262,7 @@ export class GeometryUtils {
 	 * 
 	 * @param geometry
 	 *            geometry
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static minimizeWGS84(geometry: Geometry): void {
 		GeometryUtils.minimize(geometry, GeometryConstants.WGS84_HALF_WORLD_LON_WIDTH);
@@ -275,7 +275,7 @@ export class GeometryUtils {
 	 * 
 	 * @param geometry
 	 *            geometry
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static minimizeWebMercator(geometry: Geometry): void {
 		GeometryUtils.minimize(geometry, GeometryConstants.WEB_MERCATOR_HALF_WORLD_WIDTH);
@@ -318,7 +318,7 @@ export class GeometryUtils {
 	 *            geometry
 	 * @param maxX
 	 *            max positive x value in the geometry projection
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static minimize(geometry: Geometry, maxX: number): void {
 		const geometryType = geometry.geometryType;
@@ -458,7 +458,7 @@ export class GeometryUtils {
 	 * 
 	 * @param geometry
 	 *            geometry
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static normalizeWGS84(geometry: Geometry): void {
 		GeometryUtils.normalize(geometry, GeometryConstants.WGS84_HALF_WORLD_LON_WIDTH);
@@ -471,7 +471,7 @@ export class GeometryUtils {
 	 * 
 	 * @param geometry
 	 *            geometry
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static normalizeWebMercator(geometry: Geometry): void {
 		GeometryUtils.normalize(geometry, GeometryConstants.WEB_MERCATOR_HALF_WORLD_WIDTH);
@@ -512,7 +512,7 @@ export class GeometryUtils {
 	 *            geometry
 	 * @param maxX
 	 *            max positive x value in the geometry projection
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static normalize(geometry: Geometry, maxX: number): void {
 		const geometryType = geometry.geometryType;
@@ -1105,7 +1105,7 @@ export class GeometryUtils {
 	 * @param line2
 	 *            second line
 	 * @return intersection point or null if no intersection
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static intersectionLine(line1: Line, line2: Line): Point {
 		return GeometryUtils.intersection(line1.startPoint(), line1.endPoint(),
@@ -1156,7 +1156,7 @@ export class GeometryUtils {
 	 * @param geometry
 	 *            geometry in degrees
 	 * @return geometry in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMeters(geometry: Geometry): Geometry {
 		let meters: Geometry = null;
@@ -1223,7 +1223,7 @@ export class GeometryUtils {
 	 * @param point
 	 *            point in degrees
 	 * @return point in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMetersPoint(point: Point): Point {
 		const value = GeometryUtils.degreesToMetersCoord(point.x, point.y);
@@ -1240,7 +1240,7 @@ export class GeometryUtils {
 	 * @param y
 	 *            y value in degrees
 	 * @return point in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMetersCoord(x: number, y: number): Point {
 		x = GeometryUtils.normalizeX(x, GeometryConstants.WGS84_HALF_WORLD_LON_WIDTH);
@@ -1263,7 +1263,7 @@ export class GeometryUtils {
 	 * @param multiPoint
 	 *            multi point in degrees
 	 * @return multi point in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMetersMultiPoint(multiPoint: MultiPoint): MultiPoint {
 		const meters = new MultiPoint(multiPoint.hasZ,
@@ -1297,7 +1297,7 @@ export class GeometryUtils {
 	 * @param line
 	 *            line in degrees
 	 * @return line in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMetersLine(line: Line): Line {
 		const meters = new Line(line.hasZ, line.hasM);
@@ -1313,7 +1313,7 @@ export class GeometryUtils {
 	 * @param multiLineString
 	 *            multi line string in degrees
 	 * @return multi line string in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMetersMultiLineString(
 		multiLineString: MultiLineString): MultiLineString {
@@ -1331,7 +1331,7 @@ export class GeometryUtils {
 	 * @param polygon
 	 *            polygon in degrees
 	 * @return polygon in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMetersPolygon(polygon: Polygon): Polygon {
 		const meters = new Polygon(polygon.hasZ, polygon.hasM);
@@ -1347,7 +1347,7 @@ export class GeometryUtils {
 	 * @param multiPolygon
 	 *            multi polygon in degrees
 	 * @return multi polygon in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMetersMultiPolygon(multiPolygon: MultiPolygon): MultiPolygon {
 		const meters = new MultiPolygon(multiPolygon.hasZ,
@@ -1364,7 +1364,7 @@ export class GeometryUtils {
 	 * @param circularString
 	 *            circular string in degrees
 	 * @return circular string in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMetersCircularString(
 		circularString: CircularString): CircularString {
@@ -1382,7 +1382,7 @@ export class GeometryUtils {
 	 * @param compoundCurve
 	 *            compound curve in degrees
 	 * @return compound curve in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMetersCompundCurve(compoundCurve: CompoundCurve): CompoundCurve {
 		const meters = new CompoundCurve(compoundCurve.hasZ,
@@ -1399,7 +1399,7 @@ export class GeometryUtils {
 	 * @param curvePolygon
 	 *            curve polygon in degrees
 	 * @return curve polygon in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMetersCurvePolygon(
 		curvePolygon: CurvePolygon<Curve>): CurvePolygon<Curve> {
@@ -1417,7 +1417,7 @@ export class GeometryUtils {
 	 * @param polyhedralSurface
 	 *            polyhedral surface in degrees
 	 * @return polyhedral surface in meters
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static degreesToMetersPolyhedralSurface(
 		polyhedralSurface: PolyhedralSurface): PolyhedralSurface {
@@ -1435,7 +1435,7 @@ export class GeometryUtils {
 	 * @param geometry
 	 *            geometry in meters
 	 * @return geometry in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegrees(geometry: Geometry): Geometry {
 		let degrees: Geometry = null;
@@ -1502,7 +1502,7 @@ export class GeometryUtils {
 	 * @param point
 	 *            point in meters
 	 * @return point in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegreesPoint(point: Point): Point {
 		const value = GeometryUtils.metersToDegreesCoord(point.x, point.y);
@@ -1519,7 +1519,7 @@ export class GeometryUtils {
 	 * @param y
 	 *            y value in meters
 	 * @return point in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegreesCoord(x: number, y: number): Point {
 		const xValue = x * GeometryConstants.WGS84_HALF_WORLD_LON_WIDTH
@@ -1539,7 +1539,7 @@ export class GeometryUtils {
 	 * @param multiPoint
 	 *            multi point in meters
 	 * @return multi point in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegreesMultiPoint(multiPoint: MultiPoint): MultiPoint {
 		const degrees = new MultiPoint(multiPoint.hasZ,
@@ -1556,7 +1556,7 @@ export class GeometryUtils {
 	 * @param lineString
 	 *            line string in meters
 	 * @return line string in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegreesLineString(lineString: LineString): LineString {
 		const degrees = new LineString(lineString.hasZ,
@@ -1573,7 +1573,7 @@ export class GeometryUtils {
 	 * @param line
 	 *            line in meters
 	 * @return line in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegreesLine(line: Line): Line {
 		const degrees = new Line(line.hasZ, line.hasM);
@@ -1589,7 +1589,7 @@ export class GeometryUtils {
 	 * @param multiLineString
 	 *            multi line string in meters
 	 * @return multi line string in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegreesMultiLineString(
 		multiLineString: MultiLineString): MultiLineString {
@@ -1607,7 +1607,7 @@ export class GeometryUtils {
 	 * @param polygon
 	 *            polygon in meters
 	 * @return polygon in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegreesPolygon(polygon: Polygon): Polygon {
 		const degrees = new Polygon(polygon.hasZ, polygon.hasM);
@@ -1623,7 +1623,7 @@ export class GeometryUtils {
 	 * @param multiPolygon
 	 *            multi polygon in meters
 	 * @return multi polygon in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegreesMultiPolygon(multiPolygon: MultiPolygon): MultiPolygon {
 		const degrees = new MultiPolygon(multiPolygon.hasZ,
@@ -1640,7 +1640,7 @@ export class GeometryUtils {
 	 * @param circularString
 	 *            circular string in meters
 	 * @return circular string in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegreesCircularString(circularString: CircularString): CircularString {
 		const degrees = new CircularString(circularString.hasZ,
@@ -1657,7 +1657,7 @@ export class GeometryUtils {
 	 * @param compoundCurve
 	 *            compound curve in meters
 	 * @return compound curve in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegreesCompoundCurve(compoundCurve: CompoundCurve): CompoundCurve {
 		const degrees = new CompoundCurve(compoundCurve.hasZ,
@@ -1692,7 +1692,7 @@ export class GeometryUtils {
 	 * @param polyhedralSurface
 	 *            polyhedral surface in meters
 	 * @return polyhedral surface in degrees
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static metersToDegreesPolyhedralSurface(
 		polyhedralSurface: PolyhedralSurface): PolyhedralSurface {
@@ -1708,7 +1708,7 @@ export class GeometryUtils {
 	 * Get a WGS84 bounded geometry envelope
 	 * 
 	 * @return geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static wgs84Envelope(): GeometryEnvelope {
 		return new GeometryEnvelope(
@@ -1723,7 +1723,7 @@ export class GeometryUtils {
 	 * (degrees to meters)
 	 * 
 	 * @return geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static wgs84TransformableEnvelope(): GeometryEnvelope {
 		return new GeometryEnvelope(
@@ -1737,7 +1737,7 @@ export class GeometryUtils {
 	 * Get a Web Mercator bounded geometry envelope
 	 * 
 	 * @return geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static webMercatorEnvelope(): GeometryEnvelope {
 		return new GeometryEnvelope(
@@ -1751,7 +1751,7 @@ export class GeometryUtils {
 	 * Get a WGS84 geometry envelope with Web Mercator bounds
 	 * 
 	 * @return geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static wgs84EnvelopeWithWebMercator(): GeometryEnvelope {
 		return new GeometryEnvelope(
@@ -1769,7 +1769,7 @@ export class GeometryUtils {
 	 * @param geometry
 	 *            geometry in meters
 	 * @return cropped geometry in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropWebMercator(geometry: Geometry): Geometry {
 		return GeometryUtils.crop(geometry, GeometryUtils.webMercatorEnvelope());
@@ -1785,7 +1785,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope in meters
 	 * @return cropped geometry in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static crop(geometry: Geometry, envelope: GeometryEnvelope): Geometry {
 
@@ -1861,7 +1861,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope
 	 * @return cropped point or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropPoint(point: Point, envelope: GeometryEnvelope): Point {
 		let crop: Point = null;
@@ -1881,7 +1881,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope in meters
 	 * @return cropped points in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropPoints(points: Point[],
 		envelope: GeometryEnvelope): Point[] {
@@ -2036,7 +2036,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope
 	 * @return cropped multi point or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropMultiPoint(multiPoint: MultiPoint,
 		envelope: GeometryEnvelope): MultiPoint {
@@ -2065,7 +2065,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope in meters
 	 * @return cropped line string in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropLineString(lineString: LineString,
 		envelope: GeometryEnvelope): LineString {
@@ -2088,7 +2088,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope in meters
 	 * @return cropped line in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropLine(line: Line, envelope: GeometryEnvelope): Line {
 		let crop: Line = null;
@@ -2110,7 +2110,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope in meters
 	 * @return cropped multi line string in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropMultiLineString(multiLineString: MultiLineString,
 		envelope: GeometryEnvelope): MultiLineString {
@@ -2140,7 +2140,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope in meters
 	 * @return cropped polygon in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropPolygon(polygon: Polygon, envelope: GeometryEnvelope): Polygon {
 		let crop: Polygon = null;
@@ -2174,7 +2174,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope in meters
 	 * @return cropped multi polygon in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropMultiPolygon(multiPolygon: MultiPolygon,
 		envelope: GeometryEnvelope): MultiPolygon {
@@ -2203,7 +2203,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope in meters
 	 * @return cropped circular string in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropCircularString(circularString: CircularString,
 		envelope: GeometryEnvelope): CircularString {
@@ -2227,7 +2227,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope in meters
 	 * @return cropped compound curve in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropCompoundCurve(compoundCurve: CompoundCurve,
 		envelope: GeometryEnvelope): CompoundCurve {
@@ -2257,7 +2257,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope in meters
 	 * @return cropped curve polygon in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropCurvePolygon(curvePolygon: CurvePolygon<Curve>,
 		envelope: GeometryEnvelope): CurvePolygon<Curve> {
@@ -2286,7 +2286,7 @@ export class GeometryUtils {
 	 * @param envelope
 	 *            envelope in meters
 	 * @return cropped polyhedral surface in meters or null
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static cropPolyhedralSurface(polyhedralSurface: PolyhedralSurface,
 		envelope: GeometryEnvelope): PolyhedralSurface {
@@ -2316,7 +2316,7 @@ export class GeometryUtils {
 	 * @param point2
 	 *            point 2
 	 * @return true if equal
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static isEqual(point1: Point, point2: Point): boolean {
 		return GeometryUtils.isEqualWithEpsilon(point1, point2, GeometryConstants.DEFAULT_EQUAL_EPSILON);
@@ -2333,7 +2333,7 @@ export class GeometryUtils {
 	 * @param epsilon
 	 *            epsilon equality tolerance
 	 * @return true if equal
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static isEqualWithEpsilon(point1: Point, point2: Point, epsilon: number): boolean {
 		let equal = Math.abs(point1.x - point2.x) <= epsilon
@@ -2361,7 +2361,7 @@ export class GeometryUtils {
 	 * @param point
 	 *            point
 	 * @return true if contains
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static containsPoint(envelope: GeometryEnvelope, point: Point): boolean {
 		return envelope.containsPointWithEpsilon(point,
@@ -2378,7 +2378,7 @@ export class GeometryUtils {
 	 * @param envelope2
 	 *            envelope 2
 	 * @return true if contains
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static containsGeometryEnvelope(envelope1: GeometryEnvelope,
 		envelope2: GeometryEnvelope): boolean {
@@ -2395,7 +2395,7 @@ export class GeometryUtils {
 	 * 
 	 * @param geometry
 	 *            geometry
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static boundWGS84(geometry: Geometry): void {
 		GeometryUtils.bound(geometry, GeometryUtils.wgs84Envelope());
@@ -2411,7 +2411,7 @@ export class GeometryUtils {
 	 * 
 	 * @param geometry
 	 *            geometry
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static boundWGS84Transformable(geometry: Geometry): void {
 		GeometryUtils.bound(geometry, GeometryUtils.wgs84TransformableEnvelope());
@@ -2458,7 +2458,7 @@ export class GeometryUtils {
 	 *            geometry
 	 * @param envelope
 	 *            geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public static bound(geometry: Geometry, envelope: GeometryEnvelope): void {
 
@@ -2523,7 +2523,7 @@ export class GeometryUtils {
 	 *            point
 	 * @param envelope
 	 *            geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	private static boundPoint(point: Point, envelope: GeometryEnvelope): void {
 		const x = point.x;
@@ -2547,7 +2547,7 @@ export class GeometryUtils {
 	 *            multi point
 	 * @param envelope
 	 *            geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	private static boundMultiPoint(multiPoint: MultiPoint,
 		envelope: GeometryEnvelope): void {
@@ -2563,7 +2563,7 @@ export class GeometryUtils {
 	 *            line string
 	 * @param envelope
 	 *            geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	private static boundLineString(lineString: LineString,
 		envelope: GeometryEnvelope): void {
@@ -2579,7 +2579,7 @@ export class GeometryUtils {
 	 *            multi line string
 	 * @param envelope
 	 *            geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	private static boundMultiLineString(multiLineString: MultiLineString,
 		envelope: GeometryEnvelope): void {
@@ -2595,7 +2595,7 @@ export class GeometryUtils {
 	 *            polygon
 	 * @param envelope
 	 *            geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	private static boundPolygon(polygon: Polygon, envelope: GeometryEnvelope): void {
 		for (const ring of polygon.rings) {
@@ -2610,7 +2610,7 @@ export class GeometryUtils {
 	 *            multi polygon
 	 * @param envelope
 	 *            geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	private static boundMultiPolygon(multiPolygon: MultiPolygon,
 		envelope: GeometryEnvelope): void {
@@ -2626,7 +2626,7 @@ export class GeometryUtils {
 	 *            compound curve
 	 * @param envelope
 	 *            geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	private static boundCompoundCurve(compoundCurve: CompoundCurve,
 		envelope: GeometryEnvelope): void {
@@ -2642,7 +2642,7 @@ export class GeometryUtils {
 	 *            curve polygon
 	 * @param envelope
 	 *            geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	private static boundCurvePolygon(curvePolygon: CurvePolygon<Curve>,
 		envelope: GeometryEnvelope): void {
@@ -2658,7 +2658,7 @@ export class GeometryUtils {
 	 *            polyhedral surface
 	 * @param envelope
 	 *            geometry envelope
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	private static boundPolyhedralSurface(polyhedralSurface: PolyhedralSurface,
 		envelope: GeometryEnvelope): void {

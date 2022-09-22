@@ -7,16 +7,6 @@ import { SFException, GeometryType, Geometry, Point, GeometryCollection, CurvePo
 export class DegreesCentroid {
 
 	/**
-	 * Radians to Degrees conversion
-	 */
-	public static RADIANS_TO_DEGREES: number = 180.0 / Math.PI;
-
-	/**
-	 * Degrees to Radians conversion
-	 */
-	public static DEGREES_TO_RADIANS: number = Math.PI / 180.0;
-
-	/**
 	 * Geometry
 	 */
 	private _geometry: Geometry;
@@ -83,7 +73,9 @@ export class DegreesCentroid {
 			const centroidLongitude = Math.atan2(this._y, this._x);
 			const centroidLatitude = Math.atan2(this._z, Math.sqrt(this._x * this._x + this._y * this._y));
 
-			centroid = new Point(centroidLongitude * DegreesCentroid.RADIANS_TO_DEGREES, centroidLatitude * DegreesCentroid.RADIANS_TO_DEGREES);
+			centroid = new Point(
+				GeometryUtils.radiansToDegrees(centroidLongitude),
+				GeometryUtils.radiansToDegrees(centroidLatitude));
 		}
 
 		return centroid;
@@ -146,8 +138,8 @@ export class DegreesCentroid {
 	 * @param point Point
 	 */
 	private calculatePoint(point: Point): void {
-		const latitude = point.y * DegreesCentroid.DEGREES_TO_RADIANS;
-		const longitude = point.x * DegreesCentroid.DEGREES_TO_RADIANS;
+		const latitude = GeometryUtils.degreesToRadians(point.y);
+		const longitude = GeometryUtils.degreesToRadians(point.x);
 		const cosLatitude = Math.cos(latitude);
 		this._x += cosLatitude * Math.cos(longitude);
 		this._y += cosLatitude * Math.sin(longitude);

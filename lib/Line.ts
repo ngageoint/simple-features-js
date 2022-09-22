@@ -15,7 +15,7 @@ export class Line extends LineString {
 	 *            first point
 	 * @param point2
 	 *            second point
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public constructor(point1: Point, point2: Point);
 
@@ -33,7 +33,7 @@ export class Line extends LineString {
 			this.points = args[0];
 		} else if (args.length === 2 && typeof args[0] === 'boolean') {
 			super(args[0], args[1]);
-		} else if (args.length === 2 && args[0] instanceof Point) {
+		} else if (args.length === 2 && args[0] instanceof Point && args[1] instanceof Point) {
 			const point1: Point = args[0];
 			const point2: Point = args[1];
 			super(point1.hasZ || point2.hasZ, point1.hasM || point2.hasM);

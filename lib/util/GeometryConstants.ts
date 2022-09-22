@@ -2,7 +2,7 @@
  * Geometry Constants
  * 
  * @author osbornb
- * @since 1.0.3
+ * @since 1.1.1
  */
 export class GeometryConstants {
 

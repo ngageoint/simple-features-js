@@ -334,7 +334,7 @@ export class GeometryEnvelope {
 	 * Get the top left point
 	 * 
 	 * @return top left point
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public getTopLeft(): Point {
 		return new Point(this.minX, this.maxY);
@@ -344,7 +344,7 @@ export class GeometryEnvelope {
 	 * Get the bottom left point
 	 * 
 	 * @return bottom left point
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public getBottomLeft(): Point {
 		return new Point(this.minX, this.minY);
@@ -354,7 +354,7 @@ export class GeometryEnvelope {
 	 * Get the bottom right point
 	 * 
 	 * @return bottom right point
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public getBottomRight(): Point {
 		return new Point(this.maxX, this.minY);
@@ -364,7 +364,7 @@ export class GeometryEnvelope {
 	 * Get the top right point
 	 * 
 	 * @return top right point
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public getTopRight(): Point {
 		return new Point(this.maxX, this.maxY);
@@ -374,7 +374,7 @@ export class GeometryEnvelope {
 	 * Get the left line
 	 * 
 	 * @return left line
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public getLeft(): Line {
 		return new Line(this.getTopLeft(), this.getBottomLeft());
@@ -384,7 +384,7 @@ export class GeometryEnvelope {
 	 * Get the bottom line
 	 * 
 	 * @return bottom line
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public getBottom(): Line {
 		return new Line(this.getBottomLeft(), this.getBottomRight());
@@ -394,7 +394,7 @@ export class GeometryEnvelope {
 	 * Get the right line
 	 * 
 	 * @return right line
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public getRight(): Line {
 		return new Line(this.getBottomRight(), this.getTopRight());
@@ -404,7 +404,7 @@ export class GeometryEnvelope {
 	 * Get the top line
 	 * 
 	 * @return top line
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public getTop(): Line {
 		return new Line(this.getTopRight(), this.getTopLeft());
@@ -442,7 +442,7 @@ export class GeometryEnvelope {
 	 * Determine if the envelope is empty
 	 * 
 	 * @return true if empty
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public isEmpty(): boolean {
 		return this.xRange <= 0.0 || this.yRange <= 0.0;
@@ -505,7 +505,7 @@ export class GeometryEnvelope {
 	 * @param point
 	 *            point
 	 * @return true if contains
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public containsPoint(point: Point): boolean {
 		return this.containsPointWithEpsilon(point, 0.0);
@@ -519,7 +519,7 @@ export class GeometryEnvelope {
 	 * @param epsilon
 	 *            epsilon equality tolerance
 	 * @return true if contains
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public containsPointWithEpsilon(point: Point, epsilon: number): boolean {
 		return this.containsCoordsWithEpsilon(point.x, point.y, epsilon);
@@ -533,7 +533,7 @@ export class GeometryEnvelope {
 	 * @param y
 	 *            y value
 	 * @return true if contains
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public containsCoords(x: number, y: number): boolean {
 		return this.containsCoordsWithEpsilon(x, y, 0.0);
@@ -549,7 +549,7 @@ export class GeometryEnvelope {
 	 * @param epsilon
 	 *            epsilon equality tolerance
 	 * @return true if contains
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public containsCoordsWithEpsilon(x: number, y: number, epsilon: number): boolean {
 		return x >= this.minX - epsilon && x <= this.maxX + epsilon
@@ -573,7 +573,7 @@ export class GeometryEnvelope {
 	 * @param epsilon
 	 *            epsilon equality tolerance
 	 * @return true if contains
-	 * @since 1.0.3
+	 * @since 1.1.1
 	 */
 	public containsWithEpsilon(envelope: GeometryEnvelope, epsilon: number): boolean {
 		return this.minX - epsilon <= envelope.minX
