@@ -28,8 +28,7 @@ export class LineString extends Curve {
 			args[0].points.forEach(point => this.addPoint(point.copy() as Point));
 		} else if (args.length === 1 && args[0] instanceof Array) {
 			super(GeometryType.LINESTRING, Geometry.hasZ(args[0]), Geometry.hasM(args[0]));
-			this._points = []
-			this.points = args[0]
+			this._points = args[0]
 		} else if (args.length === 2) {
 			super(GeometryType.LINESTRING, args[0], args[1]);
 			this._points = []
@@ -106,7 +105,7 @@ export class LineString extends Curve {
 	public endPoint (): Point {
 		let endPoint: Point = null;
 		if (!this.isEmpty()) {
-			endPoint = this._points[this.points.length - 1];
+			endPoint = this._points[this._points.length - 1];
 		}
 		return endPoint;
 	}

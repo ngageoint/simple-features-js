@@ -45,25 +45,6 @@ export class Line extends LineString {
 	/**
 	 * {@inheritDoc}
 	 */
-	 public get points (): Array<Point> {
-		// @ts-ignore
-		return super.points;
-	 }
-
-	/**
-	 * {@inheritDoc}
-	 */
-	public set points(points: Array<Point>) {
-		// @ts-ignore
-		super.points = points;
-		if (this.numPoints() != 2) {
-			throw new SFException("A line must have exactly 2 points.");
-		}
-	}
-
-	/**
-	 * {@inheritDoc}
-	 */
 	public copy(): Geometry {
 		return new Line(this);
 	}
