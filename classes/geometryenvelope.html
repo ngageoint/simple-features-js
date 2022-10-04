@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>GeometryEnvelope | @ngageoint/simple-features-js - v1.0.2</title>
+	<title>GeometryEnvelope | @ngageoint/simple-features-js - v1.1.0</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@ngageoint/simple-features-js - v1.0.2</a>
+					<a href="../index.html" class="title">@ngageoint/simple-features-js - v1.1.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -116,10 +116,26 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#buildgeometry" class="tsd-kind-icon">build<wbr>Geometry</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#contains" class="tsd-kind-icon">contains</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#containscoords" class="tsd-kind-icon">contains<wbr>Coords</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#containscoordswithepsilon" class="tsd-kind-icon">contains<wbr>Coords<wbr>With<wbr>Epsilon</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#containspoint" class="tsd-kind-icon">contains<wbr>Point</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#containspointwithepsilon" class="tsd-kind-icon">contains<wbr>Point<wbr>With<wbr>Epsilon</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#containswithepsilon" class="tsd-kind-icon">contains<wbr>With<wbr>Epsilon</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#copy" class="tsd-kind-icon">copy</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#equals" class="tsd-kind-icon">equals</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#getbottom" class="tsd-kind-icon">get<wbr>Bottom</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#getbottomleft" class="tsd-kind-icon">get<wbr>Bottom<wbr>Left</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#getbottomright" class="tsd-kind-icon">get<wbr>Bottom<wbr>Right</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#getleft" class="tsd-kind-icon">get<wbr>Left</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#getmidx" class="tsd-kind-icon">get<wbr>MidX</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#getmidy" class="tsd-kind-icon">get<wbr>MidY</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#getright" class="tsd-kind-icon">get<wbr>Right</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#gettop" class="tsd-kind-icon">get<wbr>Top</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#gettopleft" class="tsd-kind-icon">get<wbr>Top<wbr>Left</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#gettopright" class="tsd-kind-icon">get<wbr>Top<wbr>Right</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#intersects" class="tsd-kind-icon">intersects</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#is3d" class="tsd-kind-icon">is3D</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#ismeasured" class="tsd-kind-icon">is<wbr>Measured</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#ispoint" class="tsd-kind-icon">is<wbr>Point</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="geometryenvelope.html#overlap" class="tsd-kind-icon">overlap</a></li>
@@ -141,13 +157,12 @@
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Geometry<wbr>Envelope<span class="tsd-signature-symbol">(</span>minX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, minY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="geometryenvelope.html" class="tsd-signature-type">GeometryEnvelope</a></li>
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Geometry<wbr>Envelope<span class="tsd-signature-symbol">(</span>minX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, minY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, minZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="geometryenvelope.html" class="tsd-signature-type">GeometryEnvelope</a></li>
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Geometry<wbr>Envelope<span class="tsd-signature-symbol">(</span>minX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, minY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, minZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, minM<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxM<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="geometryenvelope.html" class="tsd-signature-type">GeometryEnvelope</a></li>
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Geometry<wbr>Envelope<span class="tsd-signature-symbol">(</span>minX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, minY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, minZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxX<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxY<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, maxZ<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="geometryenvelope.html" class="tsd-signature-type">GeometryEnvelope</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L55">lib/GeometryEnvelope.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L55">lib/GeometryEnvelope.ts:55</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -161,7 +176,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L57">lib/GeometryEnvelope.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L57">lib/GeometryEnvelope.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -181,7 +196,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L58">lib/GeometryEnvelope.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L58">lib/GeometryEnvelope.ts:58</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -204,7 +219,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L59">lib/GeometryEnvelope.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L59">lib/GeometryEnvelope.ts:59</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -233,7 +248,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L60">lib/GeometryEnvelope.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L60">lib/GeometryEnvelope.ts:60</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -268,7 +283,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L61">lib/GeometryEnvelope.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L61">lib/GeometryEnvelope.ts:61</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -306,41 +321,6 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="geometryenvelope.html" class="tsd-signature-type">GeometryEnvelope</a></h4>
 						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L62">lib/GeometryEnvelope.ts:62</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Constructor
-									Constructor</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>minX: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>minY: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>minZ: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>maxX: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>maxY: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>maxZ: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="geometryenvelope.html" class="tsd-signature-type">GeometryEnvelope</a></h4>
-						</li>
 					</ul>
 				</section>
 			</section>
@@ -356,7 +336,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L321">lib/GeometryEnvelope.ts:321</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L437">lib/GeometryEnvelope.ts:437</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -380,7 +360,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L224">lib/GeometryEnvelope.ts:224</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L240">lib/GeometryEnvelope.ts:240</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -394,7 +374,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L232">lib/GeometryEnvelope.ts:232</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L248">lib/GeometryEnvelope.ts:248</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -429,7 +409,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L176">lib/GeometryEnvelope.ts:176</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L192">lib/GeometryEnvelope.ts:192</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -443,7 +423,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L184">lib/GeometryEnvelope.ts:184</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L200">lib/GeometryEnvelope.ts:200</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -477,7 +457,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L300">lib/GeometryEnvelope.ts:300</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L316">lib/GeometryEnvelope.ts:316</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -501,7 +481,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L256">lib/GeometryEnvelope.ts:256</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L272">lib/GeometryEnvelope.ts:272</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -515,7 +495,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L264">lib/GeometryEnvelope.ts:264</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L280">lib/GeometryEnvelope.ts:280</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -550,7 +530,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L128">lib/GeometryEnvelope.ts:128</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L144">lib/GeometryEnvelope.ts:144</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -564,7 +544,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L136">lib/GeometryEnvelope.ts:136</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L152">lib/GeometryEnvelope.ts:152</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -599,7 +579,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L160">lib/GeometryEnvelope.ts:160</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L176">lib/GeometryEnvelope.ts:176</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -613,7 +593,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L168">lib/GeometryEnvelope.ts:168</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L184">lib/GeometryEnvelope.ts:184</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -648,7 +628,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L208">lib/GeometryEnvelope.ts:208</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L224">lib/GeometryEnvelope.ts:224</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -662,7 +642,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L216">lib/GeometryEnvelope.ts:216</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L232">lib/GeometryEnvelope.ts:232</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -697,7 +677,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L240">lib/GeometryEnvelope.ts:240</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L256">lib/GeometryEnvelope.ts:256</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -711,7 +691,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L248">lib/GeometryEnvelope.ts:248</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L264">lib/GeometryEnvelope.ts:264</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -746,7 +726,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L112">lib/GeometryEnvelope.ts:112</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L128">lib/GeometryEnvelope.ts:128</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -760,7 +740,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L120">lib/GeometryEnvelope.ts:120</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L136">lib/GeometryEnvelope.ts:136</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -795,7 +775,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L144">lib/GeometryEnvelope.ts:144</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L160">lib/GeometryEnvelope.ts:160</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -809,7 +789,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L152">lib/GeometryEnvelope.ts:152</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L168">lib/GeometryEnvelope.ts:168</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -844,7 +824,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L192">lib/GeometryEnvelope.ts:192</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L208">lib/GeometryEnvelope.ts:208</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -858,7 +838,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L200">lib/GeometryEnvelope.ts:200</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L216">lib/GeometryEnvelope.ts:216</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -892,7 +872,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L272">lib/GeometryEnvelope.ts:272</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L288">lib/GeometryEnvelope.ts:288</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -915,7 +895,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L280">lib/GeometryEnvelope.ts:280</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L296">lib/GeometryEnvelope.ts:296</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -938,7 +918,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L288">lib/GeometryEnvelope.ts:288</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L304">lib/GeometryEnvelope.ts:304</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -964,7 +944,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L392">lib/GeometryEnvelope.ts:392</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L589">lib/GeometryEnvelope.ts:589</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -987,7 +967,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L381">lib/GeometryEnvelope.ts:381</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L564">lib/GeometryEnvelope.ts:564</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1010,6 +990,221 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="containscoords" class="tsd-anchor"></a>
+					<h3>contains<wbr>Coords</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">contains<wbr>Coords<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L538">lib/GeometryEnvelope.ts:538</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Determine if contains the coordinate</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code>       x <span class="hljs-keyword">value</span></code></pre>
+									</div>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code>       y <span class="hljs-keyword">value</span></code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if contains</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="containscoordswithepsilon" class="tsd-anchor"></a>
+					<h3>contains<wbr>Coords<wbr>With<wbr>Epsilon</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">contains<wbr>Coords<wbr>With<wbr>Epsilon<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, epsilon<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L554">lib/GeometryEnvelope.ts:554</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Determine if contains the coordinate</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code>       x <span class="hljs-keyword">value</span></code></pre>
+									</div>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code>       y <span class="hljs-keyword">value</span></code></pre>
+									</div>
+								</li>
+								<li>
+									<h5>epsilon: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code>       epsilon <span class="hljs-built_in">equality</span> tolerance</code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if contains</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="containspoint" class="tsd-anchor"></a>
+					<h3>contains<wbr>Point</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">contains<wbr>Point<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="point.html" class="tsd-signature-type">Point</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L510">lib/GeometryEnvelope.ts:510</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Determine if contains the point</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>point: <a href="point.html" class="tsd-signature-type">Point</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code>       <span class="hljs-built_in">point</span></code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if contains</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="containspointwithepsilon" class="tsd-anchor"></a>
+					<h3>contains<wbr>Point<wbr>With<wbr>Epsilon</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">contains<wbr>Point<wbr>With<wbr>Epsilon<span class="tsd-signature-symbol">(</span>point<span class="tsd-signature-symbol">: </span><a href="point.html" class="tsd-signature-type">Point</a>, epsilon<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L524">lib/GeometryEnvelope.ts:524</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Determine if contains the point</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>point: <a href="point.html" class="tsd-signature-type">Point</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code>       <span class="hljs-built_in">point</span></code></pre>
+									</div>
+								</li>
+								<li>
+									<h5>epsilon: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code>       epsilon <span class="hljs-built_in">equality</span> tolerance</code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if contains</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="containswithepsilon" class="tsd-anchor"></a>
+					<h3>contains<wbr>With<wbr>Epsilon</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">contains<wbr>With<wbr>Epsilon<span class="tsd-signature-symbol">(</span>envelope<span class="tsd-signature-symbol">: </span><a href="geometryenvelope.html" class="tsd-signature-type">GeometryEnvelope</a>, epsilon<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L578">lib/GeometryEnvelope.ts:578</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Determine if inclusively contains the provided envelope</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>envelope: <a href="geometryenvelope.html" class="tsd-signature-type">GeometryEnvelope</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code><span class="hljs-attribute">       geometry envelope</span></code></pre>
+									</div>
+								</li>
+								<li>
+									<h5>epsilon: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<pre><code>       epsilon <span class="hljs-built_in">equality</span> tolerance</code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if contains</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="copy" class="tsd-anchor"></a>
 					<h3>copy</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
@@ -1019,7 +1214,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L413">lib/GeometryEnvelope.ts:413</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L610">lib/GeometryEnvelope.ts:610</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1042,7 +1237,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L420">lib/GeometryEnvelope.ts:420</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L617">lib/GeometryEnvelope.ts:617</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1061,6 +1256,286 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="getbottom" class="tsd-anchor"></a>
+					<h3>get<wbr>Bottom</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Bottom<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="line.html" class="tsd-signature-type">Line</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L389">lib/GeometryEnvelope.ts:389</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the bottom line</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="line.html" class="tsd-signature-type">Line</a></h4>
+							<p>bottom line</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="getbottomleft" class="tsd-anchor"></a>
+					<h3>get<wbr>Bottom<wbr>Left</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Bottom<wbr>Left<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="point.html" class="tsd-signature-type">Point</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L349">lib/GeometryEnvelope.ts:349</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the bottom left point</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="point.html" class="tsd-signature-type">Point</a></h4>
+							<p>bottom left point</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="getbottomright" class="tsd-anchor"></a>
+					<h3>get<wbr>Bottom<wbr>Right</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Bottom<wbr>Right<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="point.html" class="tsd-signature-type">Point</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L359">lib/GeometryEnvelope.ts:359</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the bottom right point</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="point.html" class="tsd-signature-type">Point</a></h4>
+							<p>bottom right point</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="getleft" class="tsd-anchor"></a>
+					<h3>get<wbr>Left</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Left<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="line.html" class="tsd-signature-type">Line</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L379">lib/GeometryEnvelope.ts:379</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the left line</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="line.html" class="tsd-signature-type">Line</a></h4>
+							<p>left line</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="getmidx" class="tsd-anchor"></a>
+					<h3>get<wbr>MidX</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>MidX<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L419">lib/GeometryEnvelope.ts:419</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the envelope mid x</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.0.3</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>mid x</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="getmidy" class="tsd-anchor"></a>
+					<h3>get<wbr>MidY</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>MidY<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L429">lib/GeometryEnvelope.ts:429</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the envelope mid y</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.0.3</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>mid y</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="getright" class="tsd-anchor"></a>
+					<h3>get<wbr>Right</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Right<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="line.html" class="tsd-signature-type">Line</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L399">lib/GeometryEnvelope.ts:399</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the right line</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="line.html" class="tsd-signature-type">Line</a></h4>
+							<p>right line</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="gettop" class="tsd-anchor"></a>
+					<h3>get<wbr>Top</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Top<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="line.html" class="tsd-signature-type">Line</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L409">lib/GeometryEnvelope.ts:409</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the top line</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="line.html" class="tsd-signature-type">Line</a></h4>
+							<p>top line</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="gettopleft" class="tsd-anchor"></a>
+					<h3>get<wbr>Top<wbr>Left</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Top<wbr>Left<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="point.html" class="tsd-signature-type">Point</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L339">lib/GeometryEnvelope.ts:339</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the top left point</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="point.html" class="tsd-signature-type">Point</a></h4>
+							<p>top left point</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="gettopright" class="tsd-anchor"></a>
+					<h3>get<wbr>Top<wbr>Right</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Top<wbr>Right<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="point.html" class="tsd-signature-type">Point</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L369">lib/GeometryEnvelope.ts:369</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get the top right point</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="point.html" class="tsd-signature-type">Point</a></h4>
+							<p>top right point</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="intersects" class="tsd-anchor"></a>
 					<h3>intersects</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
@@ -1070,7 +1545,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L331">lib/GeometryEnvelope.ts:331</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L457">lib/GeometryEnvelope.ts:457</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1108,7 +1583,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L96">lib/GeometryEnvelope.ts:96</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L112">lib/GeometryEnvelope.ts:112</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1127,6 +1602,34 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="isempty" class="tsd-anchor"></a>
+					<h3>is<wbr>Empty</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Empty<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L447">lib/GeometryEnvelope.ts:447</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Determine if the envelope is empty</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>since</dt>
+									<dd><p>1.1.1</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if empty</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="ismeasured" class="tsd-anchor"></a>
 					<h3>is<wbr>Measured</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
@@ -1136,7 +1639,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L104">lib/GeometryEnvelope.ts:104</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L120">lib/GeometryEnvelope.ts:120</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1164,7 +1667,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L313">lib/GeometryEnvelope.ts:313</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L329">lib/GeometryEnvelope.ts:329</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1192,7 +1695,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L341">lib/GeometryEnvelope.ts:341</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L467">lib/GeometryEnvelope.ts:467</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1230,7 +1733,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/4d1da63/lib/GeometryEnvelope.ts#L361">lib/GeometryEnvelope.ts:361</a></li>
+									<li>Defined in <a href="https://github.com/ngageoint/simple-features-js/blob/df6ac74/lib/GeometryEnvelope.ts#L487">lib/GeometryEnvelope.ts:487</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1324,16 +1827,64 @@
 								<a href="geometryenvelope.html#contains" class="tsd-kind-icon">contains</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#containscoords" class="tsd-kind-icon">contains<wbr>Coords</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#containscoordswithepsilon" class="tsd-kind-icon">contains<wbr>Coords<wbr>With<wbr>Epsilon</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#containspoint" class="tsd-kind-icon">contains<wbr>Point</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#containspointwithepsilon" class="tsd-kind-icon">contains<wbr>Point<wbr>With<wbr>Epsilon</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#containswithepsilon" class="tsd-kind-icon">contains<wbr>With<wbr>Epsilon</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="geometryenvelope.html#copy" class="tsd-kind-icon">copy</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="geometryenvelope.html#equals" class="tsd-kind-icon">equals</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#getbottom" class="tsd-kind-icon">get<wbr>Bottom</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#getbottomleft" class="tsd-kind-icon">get<wbr>Bottom<wbr>Left</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#getbottomright" class="tsd-kind-icon">get<wbr>Bottom<wbr>Right</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#getleft" class="tsd-kind-icon">get<wbr>Left</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#getmidx" class="tsd-kind-icon">get<wbr>MidX</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#getmidy" class="tsd-kind-icon">get<wbr>MidY</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#getright" class="tsd-kind-icon">get<wbr>Right</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#gettop" class="tsd-kind-icon">get<wbr>Top</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#gettopleft" class="tsd-kind-icon">get<wbr>Top<wbr>Left</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#gettopright" class="tsd-kind-icon">get<wbr>Top<wbr>Right</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="geometryenvelope.html#intersects" class="tsd-kind-icon">intersects</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="geometryenvelope.html#is3d" class="tsd-kind-icon">is3D</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="geometryenvelope.html#isempty" class="tsd-kind-icon">is<wbr>Empty</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="geometryenvelope.html#ismeasured" class="tsd-kind-icon">is<wbr>Measured</a>
