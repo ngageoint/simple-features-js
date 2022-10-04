@@ -14,7 +14,7 @@
   "contributors": [
     "Christopher Caldwell <c.caldwell90@gmail.com>"
   ],
-  "homepage": "http://ngageoint.github.io/simple-features-js/",
+  "homepage": "https://ngageoint.github.io/simple-features-js/",
   "repository": {
     "type": "git",
     "url": "https://github.com/ngageoint/simple-features-js.git"
@@ -22,7 +22,6 @@
   "bugs": {
     "url": "https://github.com/ngageoint/simple-features-js/issues"
   },
-  "bin": "./cli",
   "scripts": {
     "gh-pages-build": "npm install && npm run typedoc --options typedoc.json",
     "typedoc": "rm -rf ./api-docs; typedoc --tsconfig tsconfig.json --mode file --out api-docs index.ts",
@@ -84,9 +83,7 @@
   "types": "dist/index.d.ts",
   "browser": "dist/sf.min.js",
   "files": [
-    "dist",
-    "cli",
-    "converters"
+    "dist"
   ],
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",

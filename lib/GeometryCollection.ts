@@ -71,7 +71,8 @@ export class GeometryCollection<T extends Geometry> extends Geometry {
 	 * @param geometries geometries
 	 */
 	public set geometries(geometries: Array<T>) {
-		this._geometries = geometries;
+		this._geometries = [];
+		geometries.forEach(geometry => this.addGeometry(geometry));
 	}
 
 	/**

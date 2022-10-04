@@ -22,9 +22,8 @@ Software source code previously released under an open source license and then m
 
 ### Usage ###
 
-View the latest [JS Docs](http://ngageoint.github.io/simple-features-js/docs/api/)
+View the latest [JS Docs](http://ngageoint.github.io/simple-features-js)
 
-### Browser Usage ###
 
 #### Browser Usage ####
 ```html
@@ -41,6 +40,8 @@ const polygon = new Polygon(lineString)
 ```
 
 #### Node Usage ####
+[![NPM](https://img.shields.io/npm/v/@ngageoint/simple-features-js.svg)](https://www.npmjs.com/package/@ngageoint/simple-features-js)
+
 Pull from [NPM](https://www.npmjs.com/package/@ngageoint/simple-features-js)
 
 ```install
@@ -58,7 +59,7 @@ const polygon = new Polygon(lineString)
 
 ### Build ###
 
-[![Build & Test](https://github.com/ngageoint/simple-features-js/workflows/Build%20&%20Test/badge.svg)](https://github.com/ngageoint/simple-features-js/actions/workflows/build-test.yml)
+![Build & Test](https://github.com/ngageoint/simple-features-js/actions/workflows/run-tests.yml/badge.svg)
 
 Build this repository using Node.js:
    
