@@ -1,6 +1,6 @@
 // @ts-ignore
 const should = require('chai').should();
-const { Point, Polygon, LineString, GeometryUtils, GeometryType, GeometryCollection, GeometryEnvelopeBuilder, MultiPolygon } = require('../lib/internal');
+const { Point, Polygon, LineString, GeometryUtils, GeometryType, GeometryCollection, GeometryEnvelopeBuilder, MultiPolygon, GeometryConstants } = require('../lib/internal');
 const SFTestUtils = require('./SFTestUtils');
 
 /**
@@ -267,7 +267,7 @@ describe('GeometryUtilsTest', function() {
 	});
 
 	it('test simplify points', function() {
-		const halfWorldWidth = 20037508.342789244;
+		const halfWorldWidth = GeometryConstants.WEB_MERCATOR_HALF_WORLD_WIDTH;
 
 		const points = [];
 		const distances = [];
