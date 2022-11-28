@@ -62,5 +62,6 @@ bundle
 test/bundle
 test/sql-wasm.wasm
 docs/coverage
+docs/api
 
 .idea

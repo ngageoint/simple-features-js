@@ -485,10 +485,10 @@ export class GeometryEnvelope {
 	 * @return geometry envelope
 	 */
 	public union(envelope: GeometryEnvelope): GeometryEnvelope {
-		const minX = Math.max(this.minX, envelope.minX);
-		const maxX = Math.min(this.maxX, envelope.maxX);
-		const minY = Math.max(this.minY, envelope.minY);
-		const maxY = Math.min(this.maxY, envelope.maxY);
+		const minX = Math.min(this.minX, envelope.minX);
+		const maxX = Math.max(this.maxX, envelope.maxX);
+		const minY = Math.min(this.minY, envelope.minY);
+		const maxY = Math.max(this.maxY, envelope.maxY);
 
 		let union: GeometryEnvelope = null;
 
